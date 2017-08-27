@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "io.github.zhaomenghuan.template"
+        minSdkVersion 11
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // 基础包
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/my-imageloader.jar')
+    compile files('libs/my-nineoldandroids-2.4.0.jar')
+    compile files('libs/pdr.jar')
+    compile files('libs/ui.jar')
+    // Accelerometer / Proximity / Orientation
+    compile files('libs/sensor.jar')
+    // Audio
+    compile files('libs/audio.jar')
+    // Barcode
+    compile files('libs/barcode.jar')
+    // Cache / Storage / Runtime / Zip
+    compile files('libs/nopermission.jar')
+    // Camera
+    compile files('libs/camera.jar')
+    // Device
+    compile files('libs/device.jar')
+    // Downloader
+    compile files('libs/downloader.jar')
+    // File
+    compile files('libs/file.jar')
+    // Gallery
+    compile files('libs/gallery.jar')
+    // Geolocation -> system
+    compile files('libs/geolocation-system.jar')
+    compile files('libs/geolocation.jar')
+    // XMLHttpRequest
+    compile files('libs/xhr.jar')
+    // Messaging
+    compile files('libs/messaging.jar')
+    // NativeUI
+    compile files('libs/nativeui.jar')
+    // NativeObj
+    compile files('libs/nativeObj.jar')
+    // Navigator
+    compile files('libs/navigatorui.jar')
+    // Invocation
+    compile files('libs/invocation.jar')
+    // Uploader
+    compile files('libs/uploader.jar')
+}

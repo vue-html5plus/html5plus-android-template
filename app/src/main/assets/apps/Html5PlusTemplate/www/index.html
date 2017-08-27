@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>nativeUI Example</title>
+</head>
+<body>
+    hello world
+    <script src="plugin/plugin.js"></script>
+    <script type="text/javascript">
+        function plusReady() {
+            plus.test.showToast("plusready");
+        }
+
+        if(window.plus){
+            plusReady();
+        } else {
+            document.addEventListener("plusready", plusReady, false);
+        }
+	</script>
+</body>
+</html>
